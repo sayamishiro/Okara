@@ -14,5 +14,6 @@ class CreateOkaras < ActiveRecord::Migration[6.1]
 
       t.timestamps
     add_column :okaras, :image, :string 
+     end
   end
 end
