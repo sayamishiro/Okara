@@ -10,6 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2023_10_04_023026) do
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "okara_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["okara_id"], name: "index_likes_on_okara_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "okaras", force: :cascade do |t|
+    t.string "title"
+    t.string "gozen1"
+    t.string "access1"
+    t.string "gozen2"
+    t.string "access2"
+    t.string "gogo1"
+    t.string "access3"
+    t.string "gogo2"
+    t.string "access4"
+    t.string "yoru"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.string "image"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "likes", "okaras"
+  add_foreign_key "likes", "users"
 end
