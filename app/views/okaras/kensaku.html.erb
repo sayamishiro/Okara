@@ -1,0 +1,21 @@
+<h3>投稿を検索</h3>
+ <%= form_tag({controller:"okaras",action:"kensaku"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %>
+<div class="okaras-container">
+  <% @okaras.each do |t| %>
+    <div class="okara">
+      <%= t.title %>
+      <%= t.gozen1 %>
+      <%= t.access1 %>
+      <%= t.gozen2 %>
+      <%= t.access2 %>
+      <%= t.gogo1 %>
+      <%= t.access3 %>
+      <%= t.gogo2 %>
+      <%= t.access4 %>
+      <%= t.yoru %>
+      </div>
+  <% end %>
+</div>

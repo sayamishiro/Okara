@@ -1,0 +1,45 @@
+<h1>ISHIKAWA TABI Otasuke</h1>
+<h3>投稿詳細</h3>
+<div class="okara">
+  <p><%= @okara.title %></p>
+  <p><%= @okara.gozen1 %></p>
+  <p><%= @okara.access1 %></p>
+  <p><%= @okara.gozen2 %></p>
+  <p><%= @okara.access2 %></p>
+  <p><%= @okara.gogo1 %></p>
+  <p><%= @okara.access3 %></p>
+  <p><%= @okara.gogo2 %></p>
+  <p><%= @okara.access4 %></p>
+  <p><%= @okara.yoru %></p>
+  <p><%= @okara.created_at %></p>
+</div>
+
+
+
+<div>
+  <% if user_signed_in? %>
+      <% if current_user.already_liked?(@okara) %>
+        <%= button_to okara_like_path(@okara), method: :delete do %>
+          <i class="fas fa-heart"></i><%= @okara.likes.count %>          
+        <% end %>
+      <% else %>
+        <%= button_to okara_likes_path(@okara), method: :post do %>
+          <i class="far fa-heart"></i><%= @okara.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+    <i class="far fa-heart"></i><%= @okara.likes.count %>
+    <% end %>
+</div>
+
+<%= link_to "編集する", edit_okaras_path(@okara.id) %>
+
+
+<h2>いいねしたユーザー</h2>
+<ul>
+  <% @okara.liked_users.each do |user| %>
+    <li><%= user.email %></li>
+  <% end %>
+</ul>
+<%= link_to "投稿一覧に戻る", okaras_path %>
+

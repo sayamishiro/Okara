@@ -1,0 +1,99 @@
+<div class="col-10">
+  <%= image_tag '/assets/740.jpg', class: 'hoge' %>
+</div>
+<div class="col-11">
+  <div class="col-10">
+    <%= image_tag '/assets/740.jpg', class: 'hoge' %>
+  </div>
+  <div class="col-10">
+    <%= image_tag '/assets/740.jpg', class: 'hoge' %>
+  </div>
+</div>
+<h1>ISHIKAWA TABI Otasuke</h1>
+<h3>投稿一覧</h3>
+<%= link_to "新規投稿へ", new_okara_path %>
+<%= link_to "検索ページへ", okaras_kensaku_path %>
+<div class="okaras-container">
+  <% @okaras.each do |t| %>
+    <div class="okara">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= t.user.email %>
+      <%= t.title %>
+      <%= t.gozen1 %>
+      <%= t.access1 %>
+      <%= t.gozen2 %>
+      <%= t.access2 %>
+      <%= t.gogo1 %>
+      <%= t.access3 %>
+      <%= t.gogo2 %>
+      <%= t.access4 %>
+      <%= t.yoru %>
+      </div>
+
+
+ 
+      <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to okara_like_path(id: t.id, okara_id: t.id), method: :delete do %>
+            <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to okara_likes_path(id: t.id, okara_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+  <% else %>
+  <i class="far fa-heart"></i><%= t.likes.count %>
+  <% end %>
+
+  
+      <%= link_to "詳細へ", okara_path(t.id) %>
+      <% if user_signed_in? && current_user.id== t.user_id %>
+      <%= link_to "編集する", edit_okara_path(t.id) %>
+      <%= link_to "削除する", okara_path(t.id), method: :delete %>
+    <% end %> 
+  <% end %>
+
+  <h1>ランキング</h1>
+  <% @rank_okaras.each do |t| %>
+    <div class="okara">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= t.user.email %>
+      <%= t.title %>
+      <%= t.gozen1 %>
+      <%= t.access1 %>
+      <%= t.gozen2 %>
+      <%= t.access2 %>
+      <%= t.gogo1 %>
+      <%= t.access3 %>
+      <%= t.gogo2 %>
+      <%= t.access4 %>
+      <%= t.yoru %>
+      </div>
+
+
+ 
+      <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to okara_like_path(id: t.id, okara_id: t.id), method: :delete do %>
+            <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to okara_likes_path(id: t.id, okara_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+  <% else %>
+  <i class="far fa-heart"></i><%= t.likes.count %>
+  <% end %>
+
+  
+      <%= link_to "詳細へ", okara_path(t.id) %>
+      <% if user_signed_in? && current_user.id== t.user_id %>
+      <%= link_to "編集する", edit_okara_path(t.id) %>
+      <%= link_to "削除する", okara_path(t.id), method: :delete %>
+    <% end %> 
+  <% end %>
+    
+
+</div>
