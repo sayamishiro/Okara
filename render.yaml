@@ -1,0 +1,21 @@
+databases:
+  - name: Ishikawa.tabi.otasuke_db
+    databaseName: Ishikawa.tabi.otasuke_db
+    user: Ishikawa.tabi.otasuke
+    region: singapore
+
+services:
+  - type: web
+    name: Ishikawa.tabi.otasuke
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Ishikawa.tabi.otasuke_db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
