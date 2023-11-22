@@ -1,0 +1,132 @@
+<div class="top"> 
+    <div class="boxA">
+        良い旅はよいスケジュールから
+    </div>
+        
+    <div class="boxB">
+        <%= image_tag '/assets/740.jpg', class: 'mon' %>
+    </div>
+
+    <div class="boxC">
+        <div class="boxC1">
+            石川観光に来てくれるあなたへ
+        </div>
+        <div class="boxC2">
+            石川をよく知る人から、あなたに送る<br>
+            間違いのない石川観光スケジュール
+        </div>
+        <div class="boxC3">
+            「なんでこんなに雨降るの？」「歩いて行った方が早かった！」意外と難しい石川観光…<br>
+            でも、一度わかればもう簡単。<br>
+            石川に住む人だからわかる間違いのないスケジュールの組み方をあなたに届けたい。<br>
+            そんな思いから生まれた、あなたのスケジュール作りを助けるサイト
+        </div>
+    </div>
+
+    <div class="boxD">
+        <div class="boxD1">
+        <%= link_to "使ってみる",:controller=>"okaras",:action=>"setumei" %>
+        </div>
+        <div class="boxD2">
+        <%= link_to "おたスケ投稿を見る",:controller=>"okaras",:action=>"index" %>        
+        </div>
+        <div class="boxD3">
+        <%= link_to "おたスケ投稿をする",:controller=>"okaras",:action=>"new" %>
+        </div>
+    </div>
+
+    <div class="boxE">
+         <%= image_tag '/assets/kimono.jpg', class: 'kimono' %>
+         <%= image_tag '/assets/wagashi.jpg', class: 'wagashi' %>   
+    </div>  
+
+    <div class="boxF">
+        <div class="boxF-noto">
+            <%= image_tag '/assets/noto.jpg', class: 'noto' %>
+            <div class="boxF-noto1">
+                自然と石川文化   
+            </div>
+            <div class="boxF-noto2">
+                能登地域観光
+            </div>
+            <div class="boxF-noto3">
+            海、千枚田、のと島水族館、朝ドラ舞台、伝統祭事 魅力がある能登地域。金沢の街から少し遠くて回り切れない？ でもスケジュール組みさえ押さえておけば大丈夫
+            </div>
+            <div class="boxF-noto4">
+                <h2 id="boxF-noto-botan"><%= link_to "使ってみる",:controller=>"okaras",:action=>"top" %></h2>
+            </div>
+        </div>
+
+            <div class="boxF-sinai">
+                <%= image_tag '/assets/sinai.jpg', class: 'sinai' %>
+                <div class="boxF-sinai1">
+                石川来たなら、まずはここでしょ  
+            </div>
+            <div class="boxF-sinai2">
+                金沢観光
+            </div>
+            <div class="boxF-sinai3">
+                北陸新幹線開通で、観光客であふれる金沢 ド定番の観光地がたくさん！でもうまく回れてる人は 実は少ない…？だからこそおたスケさせてほしい！
+            </div>
+            <div class="boxF-sinai4">
+                <h2 id="boxF-sinai-botan"><%= link_to "使ってみる",:controller=>"okaras",:action=>"top" %></h2>
+            </div>
+        </div>
+    </div>       
+
+    <div class="boxG">
+        <div class="boxG-art">
+            <%= image_tag '/assets/art.jpg', class: 'art' %>
+            <div class="boxG-art1">
+                受け継がれる伝統で心をうるおそう
+            </div>
+            <div class="boxG-art2">
+                石川美術・工芸巡り観光  
+            </div>
+            <div class="boxG-art3">
+            漆塗の器、加賀友禅の着物、21世紀美術館、工芸館 美術作品や工芸品を愛してやまない人には ゆっくり巡れるスケジュール|がおすすめ 
+            </div>
+            <div class="boxG-art4">
+                <h2 id="boxG-art-botan"><%= link_to "使ってみる",:controller=>"okaras",:action=>"top" %></h2>
+            </div>
+        </div>
+
+        <div class="boxG-food">
+            <%= image_tag '/assets/food.jpg', class: 'food' %>
+            <div class="boxG-food1">
+                北陸のうまいもん  
+            </div>
+            <div class="boxG-food2">
+                ”食”メイン観光  
+            </div>
+            <div class="boxG-food3">
+                海鮮、和菓子、おでん、金沢カレー、五郎島金時芋… うまいもん溢れてる♡でも食べつくすには場所も食べる順番 も大事だよね。せっかくなら食べつくしプランを！   
+            </div>
+            <div class="boxG-food4">
+                <h2 id="boxG-food-botan"><%= link_to "使ってみる",:controller=>"okaras",:action=>"top" %></h2>
+            </div>
+        </div>
+    </div>  
+      
+    <div class="boxH">
+        <div class="boxH1">
+            RANKING
+        </div>
+        <div class="boxH2">
+            人気の高いおたスケ投稿を見る
+        </div>
+        <h2 id="boxH-botan"><%= link_to "ここから見る",:controller=>"okaras",:action=>"top" %></h2>
+    </div>
+
+    <div class="boxI">
+        <div class="boxI1">
+            石川をよく知る人へ
+        </div>
+        <div class="boxI2">      
+            行先のバスを見つけられない人、他にある選択肢を知らず並び続ける人、閉館時間に訪れてがっかりする人、 <br>
+            そんな観光客を見かけたことはありませんか？<br>
+            ○○すればいいのに…あなたの想いをおたスケ活動に
+        </div>
+            <h2 id="boxI-botan"><%= link_to "詳しく",:controller=>"okaras",:action=>"setumei" %></h2>
+    </div>
+</div>

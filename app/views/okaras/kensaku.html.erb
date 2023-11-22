@@ -1,8 +1,22 @@
-<h3>投稿を検索</h3>
+<div class="kensaku-h">
+  <h3>投稿を検索</h3>
+</div>
+
+<div class="kensakuran"
  <%= form_tag({controller:"okaras",action:"kensaku"}, method: :get) do %>
    <%= text_field_tag :search %>
    <%= submit_tag '検索する'  %>
 <% end %>
+</div>
+
+<div class="kensaku-rei">
+  例）行きたい場所の名前など <br>
+  →近江町市場 <br>
+  検索した観光地が含まれるスケジュールをご提案します
+</div>
+
+
+
 <div class="okaras-container">
   <% @okaras.each do |t| %>
     <div class="okara">
@@ -18,4 +32,8 @@
       <%= t.yoru %>
       </div>
   <% end %>
+</div>
+
+<div class="kensaku-itiran">
+  <%= link_to "一覧に戻る", okaras_path %> 
 </div>

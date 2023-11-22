@@ -1,0 +1,29 @@
+.itiran1, .ranking{
+    color:  rgba(177, 100, 10, 0.78);
+    padding-left: 100px;
+    border-bottom:solid rgba(177, 100, 10, 0.78) 1px;
+}
+.itiran-h, .ranking-h{
+    font-size: 30px;
+}
+.itiran-link :hover {
+    color: rgba(170, 131, 86, 0.5);
+}
+.itiran-toukou, .ranking-toukou{
+    flex-wrap: wrap;
+    display: flex;
+}
+.itiran-nakami, .ranking-nakami{
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    width: 310px;
+}
+.itiran-showsai :hover, .ranking-showsai :hover{
+    color: rgba(170, 131, 86, 0.5);
+}
+
+.ranking{
+    margin-top: 30px;
+}

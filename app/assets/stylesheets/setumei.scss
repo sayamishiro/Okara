@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+ }
+body{
+   background-color: rgba(170, 131, 86, 0.1); 
+}  
+
+.hoge{
+    background-size: cover;
+    width: 100%;
+}
+
+.hako1{
+    font-family: "Noto Sans JP";
+    color: rgba(177, 100, 10, 0.78);
+    text-align: left;
+    border:solid rgba(177, 100, 10, 0.78) 1px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+  }
+
+.hako1-1{
+    font-size: 40px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+.hako1-2{
+    font-size: 30px;
+    padding-bottom: 50px;
+   
+}
+.hako1-3{
+    font-size: 50px;
+    padding-bottom: 50px;
+ 
+}
+.hako1-4{
+    font-size: 25px;
+    padding-bottom: 50px;
+    line-height: 60px;
+}
+
+.hako2, .hako3{
+    font-family: "Noto Sans JP";
+    color: rgba(177, 100, 10, 0.78);
+    border:solid rgba(177, 100, 10, 0.78) 1px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: left;
+}
+
+.hako2tema, .hako3tema{
+    font-size: 40px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    text-shadow: 2px 2px 2px rgba(142, 137, 137, 1);
+    text-align: left;
+}
+
+.hako2ABC, .hako3ABC{
+    font-size: 25px;
+    padding-top: 50px;
+    width: 100%;  
+}
+
+.hako2A, .hako2B, .hako2C{
+    display: flex;
+}
+
+.hako2AL{
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+.hako2BL{
+    padding-bottom: 200px;
+}
+
+.hoge2 {
+    width: 50%;
+    height: 30%;
+}
+
+#hako2botan{
+    display: inline-block;
+    width: auto;
+    min-width: 15em;
+    padding: 1em 3em;
+    font-size: 150%;
+    font-weight: 600;
+    font-family: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100vw;
+    background-color: #fff;
+    border: 1.5px solid rgba(177, 100, 10, 0.78);
+    color: inherit;
+    position: relative;
+    margin-top: 200px;
+   
+}
+
+.hako3A, .hako3B, .hako3C{
+    display: flex;
+}
+
+.hako3AR{
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+.hako3BR{
+    padding-bottom: 200px;
+}
+
+
+#hako3botan{
+    display: inline-block;
+    width: auto;
+    min-width: 15em;
+    padding: 1em 3em;
+    font-size: 150%;
+    font-weight: 600;
+    font-family: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100vw;
+    background-color: #fff;
+    border: 1.5px solid rgba(177, 100, 10, 0.78);
+    color: inherit;
+    position: relative;
+    margin-top: 200px;
+   
+}

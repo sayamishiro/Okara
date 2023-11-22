@@ -1,75 +1,92 @@
-<h1>ISHIKAWA TABI Otasuke</h1>
-<h3>新規投稿ページ</h3>
+<div class="shinki">
+  <h3>新規投稿ページ</h3>
+</div>
 <%= form_for @okara do |f| %>
 
-  <div class="field">
-    <%= f.label :タイトル %>
-    <%= f.text_field :title, :size => 30 %>
-  </div>
+<div class="form">
+    <div class="new-mozisoroe">
+      <div class="title">
+        <%= f.label :タイトル %>
+        <%= f.text_field :title, :size => 30 %>
+      </div>
 
-  <div class="field">
-    <%= f.label :午前目的地１ %>
-    <%= f.text_field :gozen1, :size => 30 %>
-  </div>
+      <div class="gozen1">
+        <%= f.label :午前目的地１ %>
+        <%= f.text_field :gozen1, :size => 30 %>
+      </div>
 
-  <div class="field">
-  <%= f.label :交通手段  %>
-  <%= f.select :access1, 
-  [["北鉄バス", "北鉄バス"], 
-  ["徒歩", "徒歩"], 
-  ["電車", "電車"]], include_blank: "選択して下さい" %>
-  </div>
+      <div class="access1">
+      <%= f.label :交通手段  %>
+      <%= f.select :access1, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :午前目的地２ %>
-    <%= f.text_field :gozen2, :size => 30 %>
-  </div>
+      <div class="gozen2">
+        <%= f.label :午前目的地２ %>
+        <%= f.text_field :gozen2, :size => 30 %>
+      </div>
 
-  <div class="field">
-  <%= f.label :交通手段  %>
-  <%= f.select :access2, 
-  [["北鉄バス", "北鉄バス"], 
-  ["徒歩", "徒歩"], 
-  ["電車", "電車"]], include_blank: "選択して下さい" %>
-  </div>
+      <div class="access2">
+      <%= f.label :交通手段  %>
+      <%= f.select :access2, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :午後目的地１ %>
-    <%= f.text_field :gogo1, :size => 30 %>
-  </div>
+      <div class="gogo1">
+        <%= f.label :午後目的地１ %>
+        <%= f.text_field :gogo1, :size => 30 %>
+      </div>
 
-  <div class="field">
-  <%= f.label :交通手段  %>
-  <%= f.select :access3, 
-  [["北鉄バス", "北鉄バス"], 
-  ["徒歩", "徒歩"], 
-  ["電車", "電車"]], include_blank: "選択して下さい" %>
-  </div>
+      <div class="access3">
+      <%= f.label :交通手段  %>
+      <%= f.select :access3, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :午後目的地２ %>
-    <%= f.text_field :gogo2, :size => 30 %>
-  </div>
+      <div class="gogo2">
+        <%= f.label :午後目的地２ %>
+        <%= f.text_field :gogo2, :size => 30 %>
+      </div>
 
-  <div class="field">
-  <%= f.label :交通手段  %>
-  <%= f.select :access4, 
-  [["北鉄バス", "北鉄バス"], 
-  ["徒歩", "徒歩"], 
-  ["電車", "電車"]], include_blank: "選択して下さい" %>
-  </div>
+      <div class="access4">
+      <%= f.label :交通手段  %>
+      <%= f.select :access4, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :夜目的地 %>
-    <%= f.text_field :yoru, :size => 30 %>
-  </div>
+      <div class="yoru">
+        <%= f.label :夜目的地 %>
+        <%= f.text_field :yoru, :size => 30 %>
+      </div>
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-  
-  <%= f.submit "投稿する" %>
-<% end %>
+      <div class="advice">
+        <%= f.label :一言アドバイス %>
+        <%= f.text_area :Text, :size => 100 %>
+      </div>
+    </div>
 
-<%= link_to "一覧に戻る", okaras_path %> 
+    <div class="image">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="box-submit">
+      <%= f.submit "投稿する"%>
+      <% end %>
+    </div>
+
+    <div class="itiran">
+     <%= link_to "一覧に戻る", okaras_path %> 
+    </div>
+</div>

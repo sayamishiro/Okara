@@ -54,10 +54,13 @@ class OkarasController < ApplicationController
         okara.destroy
         redirect_to action: :index
       end
-      
+      def top
+      end
+      def setumei
+      end
       private
       def okara_params
-        params.require(:okara).permit(:title, :gozen1, :access1, :gozen2, :access2, :gogo1, :access3, :gogo2, :access4, :yoru, :image)
+        params.require(:okara).permit(:title, :gozen1, :access1, :gozen2, :access2, :gogo1, :access3, :gogo2, :access4, :yoru, :image, :Text)
       end    
 
 end

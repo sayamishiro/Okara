@@ -1,45 +1,76 @@
-<h1>ISHIKAWA TABI Otasuke</h1>
-<h3>投稿詳細</h3>
-<div class="okara">
-  <p><%= @okara.title %></p>
-  <p><%= @okara.gozen1 %></p>
-  <p><%= @okara.access1 %></p>
-  <p><%= @okara.gozen2 %></p>
-  <p><%= @okara.access2 %></p>
-  <p><%= @okara.gogo1 %></p>
-  <p><%= @okara.access3 %></p>
-  <p><%= @okara.gogo2 %></p>
-  <p><%= @okara.access4 %></p>
-  <p><%= @okara.yoru %></p>
-  <p><%= @okara.created_at %></p>
+<div class="showsai-h">
+  <h3>投稿詳細</h3>
 </div>
 
+<div class="showsai">
 
 
-<div>
+  <div class="showsai-image">
+    
+    <%= image_tag @okara.image_url, size: "600x400" if @okara.image? %>
+
+  </div>
+
+
+  <div class="showsai-title">
+    <p><%= @okara.title %></p>
+  </div>
+
+  <div class="showsai-gozen1">
+    <p><%= @okara.gozen1 %></p>
+  </div>
+  <div class="showsai-access1">
+    <p><%= @okara.access1 %></p>
+  </div>
+  <div class="showsai-gozen2">
+    <p><%= @okara.gozen2 %></p>
+  </div>
+  <div class="showsai-access2">
+    <p><%= @okara.access2 %></p>
+  </div>
+  <div class="showsai-gogo1">
+    <p><%= @okara.gogo1 %></p>
+  </div>
+  <div class="showsai-access3">
+    <p><%= @okara.access3 %></p>
+  </div>
+  <div class="showsai-gogo2">
+    <p><%= @okara.gogo2 %></p>
+  </div>
+  <div class="showsai-access4">
+    <p><%= @okara.access4 %></p>
+  </div>
+  <div class="showsai-yoru">
+    <p><%= @okara.yoru %></p>
+  </div>
+   <div class="showsai-advice">
+    一言アドバイス<br>
+    <%= @okara.Text %>  
+  </div>
+  <div class="showsai-time">
+    <p><%= @okara.created_at %></p>
+  </div>
+</div>
+
+<div class="showsai-iine">
   <% if user_signed_in? %>
       <% if current_user.already_liked?(@okara) %>
         <%= button_to okara_like_path(@okara), method: :delete do %>
-          <i class="fas fa-heart"></i><%= @okara.likes.count %>          
+          <i class="fa-regular fa-heart fa-2xl" style="color: #ca7a44;"></i><%= @okara.likes.count %>          
         <% end %>
       <% else %>
         <%= button_to okara_likes_path(@okara), method: :post do %>
-          <i class="far fa-heart"></i><%= @okara.likes.count %>
+          <i class="fa-regular fa-heart fa-2xl"style="color: #ca7a44;"></i><%= @okara.likes.count %>
         <% end %>
       <% end %>
     <% else %>
-    <i class="far fa-heart"></i><%= @okara.likes.count %>
-    <% end %>
+    <i class="fa-regular fa-heart fa-2xl"style="color: #ca7a44;"></i><%= @okara.likes.count %>
+  <% end %>
 </div>
 
-<%= link_to "編集する", edit_okaras_path(@okara.id) %>
-
-
-<h2>いいねしたユーザー</h2>
-<ul>
-  <% @okara.liked_users.each do |user| %>
-    <li><%= user.email %></li>
-  <% end %>
-</ul>
-<%= link_to "投稿一覧に戻る", okaras_path %>
+<div class="showsai-link">
+  <%= link_to "編集する", edit_okara_path(@okara.id) %>
+  <br>
+  <%= link_to "投稿一覧に戻る", okaras_path %>
+</div>
 

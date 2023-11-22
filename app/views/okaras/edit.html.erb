@@ -1,45 +1,86 @@
-<%= form_for @okara do |f| %>
-    <%= f.label :タイトル %>
-    <%= f.text_field :title, :size => 140 %> 
-    <br>
-    <%= f.label :午前目的地１ %>
-    <%= f.text_field :gozen1, :size => 140 %> 
-    <br>
-    <%= f.label :交通手段１ %>
-     <%= f.select :access1, 
-    [["北鉄バス", "北鉄バス"], 
-    ["徒歩", "徒歩"], 
-    ["電車", "電車"]], include_blank: "選択して下さい"  %> 
-    <br>
-    <%= f.label :午前目的地２ %>
-    <%= f.text_field :gozen2, :size => 140 %> 
-    <br>
-    <%= f.label :交通手段２ %>
-    <%= f.select :access2, 
-    [["北鉄バス", "北鉄バス"], 
-    ["徒歩", "徒歩"], 
-    ["電車", "電車"]], include_blank: "選択して下さい"  %>
-    <br>
-    <%= f.label :午後目的地１ %>
-    <%= f.text_field :gogo1, :size => 140 %> 
-    <br>
-    <%= f.label :交通手段３ %>
-    <%= f.select :access3, 
-    [["北鉄バス", "北鉄バス"], 
-    ["徒歩", "徒歩"], 
-    ["電車", "電車"]], include_blank: "選択して下さい"  %>
-    <br>
-    <%= f.label :午後目的地２ %>
-    <%= f.text_field :gogo2, :size => 140 %> 
-    <br>
-    <%= f.label :交通手段４ %>
-    <%= f.select :access4, 
-    [["北鉄バス", "北鉄バス"], 
-    ["徒歩", "徒歩"], 
-    ["電車", "電車"]], include_blank: "選択して下さい"  %> 
-    <br>
-    <%= f.label :夜目的地 %>
-    <%= f.text_field :yoru, :size => 140 %> 
-    
-    <%= f.submit "編集する" %>
+<div class="hensyu-h">
+  <h3>投稿内容編集</h3>
+</div>
+<div class="hensyu-form">
+  <%= form_for @okara do |f| %>
+    <div class="edit-mozisoroe">
+      <div class="hensyu-title">
+        <%= f.label :タイトル %>
+        <%= f.text_field :title, :size => 140 %> 
+      </div>
+
+      <div class="hensyu-gozen1">
+        <%= f.label :午前目的地１ %>
+        <%= f.text_field :gozen1, :size => 140 %> 
+      </div>
+
+      <div class="hensyu-access1">
+        <%= f.label :交通手段１ %>
+        <%= f.select :access1, 
+        [["北鉄バス", "北鉄バス"], 
+        ["徒歩", "徒歩"], 
+        ["レンタカー・タクシー", "レンタカー・タクシー"],
+        ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
+
+      <div class="hensyu-gozen2">
+        <%= f.label :午前目的地２ %>
+        <%= f.text_field :gozen2, :size => 140 %>
+      </div>
+
+      <div class="hensyu-access2">
+      <%= f.label :交通手段  %>
+      <%= f.select :access2, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
+
+      <div class="hensyu-gogo1">
+        <%= f.label :午後目的地１ %>
+        <%= f.text_field :gogo1, :size => 140 %>
+      </div>
+
+      <div class="hensyu-access3">
+      <%= f.label :交通手段  %>
+      <%= f.select :access3, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
+
+      <div class="hensyu-gogo2">
+        <%= f.label :午後目的地２ %>
+        <%= f.text_field :gogo2, :size => 140 %>
+      </div>
+
+      <div class="hensyu-access4">
+      <%= f.label :交通手段  %>
+      <%= f.select :access4, 
+      [["北鉄バス", "北鉄バス"], 
+      ["徒歩", "徒歩"], 
+      ["レンタカー・タクシー", "レンタカー・タクシー"],
+      ["電車", "電車"]], include_blank: "選択して下さい" %>
+      </div>
+
+      <div class="hensyu-yoru">
+        <%= f.label :夜目的地 %>
+        <%= f.text_field :yoru, :size => 140 %>
+      </div>
+
+      <div class="showsai-advice">
+        <%= f.label :一言アドバイス %>
+        <%= f.text_area :Text, :size => 100 %>
+      </div>
+    </div>
+    <div class="hensyu-image">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    </div>
+    <div class="hensyu-submit">
+      <%= f.submit "編集する" %>
+    </div>
   <% end %>
+</div>

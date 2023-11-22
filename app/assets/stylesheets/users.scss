@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP";
+   
+}
+body{
+    background-color: rgba(170, 131, 86, 0.1);
+}
+
+.nakahako {
+    background-color: rgba(170, 131, 86, 0.1);
+    justify-content: center;
+    font-size: 15px;
+    border:3px solid rgba(170, 131, 86, 0.1);
+    padding:25px;
+    margin: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+    
+}
+
+.signuph2 {
+    display: block;
+    text-align:center;
+    color: #F5F5F5;
+    background-color: rgba(177, 100, 10, 0.5);
+    padding: 10px;
+    
+}
+
+
+.signupzenbu{
+    text-align:left;
+    font-size: 20px;
+    color:rgba(177, 100, 10, 0.5);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.box-signup input[type="submit"], .box-login input[type="submit"] {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 25px;   /* 余白       */
+    background    : #627593;     /* 背景色     */
+    color         : #f1f1eb;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 1px 1px 3px #666666;  /* 影の設定 */
+    border        : 2px solid #627593;    /* 枠の指定 */
+  }
+  .box-signup input[type="submit"]:hover, .box-login input[type="submit"]:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #627593;     /* 背景色     */
+    background    : #f1f1eb;     /* 文字色     */
+  }
+
+
+.box-signup{
+    margin-top: 20px;
+}
+
+.loginnakahako{
+    background-color: rgba(170, 131, 86, 0.1);
+    justify-content: center;
+    font-size: 15px;
+    border:3px solid rgba(170, 131, 86, 0.1);
+    padding:25px;
+    margin: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.loginh2{
+    display: block;
+    text-align:center;
+    color: #F5F5F5;
+    background-color: rgba(177, 100, 10, 0.5);
+    padding: 10px;
+    
+}
+
+.loginzenbu{
+    text-align:left;
+    font-size: 20px;
+    color:rgba(177, 100, 10, 0.5);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.box-login{
+    margin-top: 20px;
+}

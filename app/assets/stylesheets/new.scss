@@ -1,0 +1,64 @@
+.body{
+    background-color: rgba(170, 131, 86, 0.1); 
+    font-family: "Noto Sans JP";
+    color: rgba(177, 100, 10, 0.78);
+    text-align: left;
+}
+.shinki{
+    color: rgba(177, 100, 10, 0.78); 
+    font-size: 30px;  
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.form{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: rgba(177, 100, 10, 0.78);
+    line-height: 50px;
+}
+
+
+.signuph2 {
+    display: block;
+    text-align:center;
+    color: #F5F5F5;
+    background-color: rgba(177, 100, 10, 0.5);
+    padding: 10px;  
+}
+.signupzenbu{
+    text-align:left;
+    font-size: 20px;
+    color:rgba(177, 100, 10, 0.5);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.box-submit input[type="submit"] {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 25px;   /* 余白       */
+    background    : #627593;     /* 背景色     */
+    color         : #f1f1eb;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 1px 1px 3px #666666;  /* 影の設定 */
+    border        : 2px solid #627593;    /* 枠の指定 */
+  }
+  .box-submit input[type="submit"]:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #627593;     /* 背景色     */
+    background    : #f1f1eb;     /* 文字色     */
+  }
+.itiran{
+    padding-top: 30px;
+    
+}
+
+.new-mozisoroe{
+    width: 200px;
+}
+
