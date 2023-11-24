@@ -61,28 +61,60 @@ body{
     text-shadow: 2px 2px 2px rgba(142, 137, 137, 1);
     text-align: left;
 }
-
+.hako3tema{
+    margin-left: 50%;
+}
 .hako2ABC, .hako3ABC{
     font-size: 25px;
     padding-top: 50px;
     width: 100%;  
 }
 
-.hako2A, .hako2B, .hako2C{
+.hako2A, .hako2B, .hako2C, .hako3A, .hako3B, .hako3C{
     display: flex;
+    margin: 20px;
 }
 
-.hako2AL{
+.hako2A-bun, .hako2B-bun, .hako2C-bun{
+    width: 60%;
+    padding-top: 150px;
+    
+}
+
+.hako3A-bun, .hako3B-bun, .hako3C-bun{
+    width: 50%;
+    padding-top: 150px;
+    padding-left: 150px;
+}
+
+
+.hako2A-bun, .hako3A-bun{
     padding-top: 150px;
     padding-bottom: 200px;
 }
-.hako2BL{
+.hako2B-bun, .hako3B-bun{
     padding-bottom: 200px;
+}
+.hako3B-bunZ{
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 .hoge2 {
-    width: 50%;
-    height: 30%;
+    width: 40%;
+    height: 20%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 90px;
+    border-radius: 8px;
+}
+.hoge3{
+    width: 35%;
+    height: 20%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 8px;
 }
 
 #hako2botan{
@@ -101,22 +133,11 @@ body{
     color: inherit;
     position: relative;
     margin-top: 200px;
-   
+    margin-top: 50px;
 }
-
-.hako3A, .hako3B, .hako3C{
-    display: flex;
+#hako2botan:hover {
+    background-color: rgba(170, 131, 86, 0.1);
 }
-
-.hako3AR{
-    padding-top: 150px;
-    padding-bottom: 200px;
-}
-.hako3BR{
-    padding-bottom: 200px;
-}
-
-
 #hako3botan{
     display: inline-block;
     width: auto;
@@ -133,5 +154,9 @@ body{
     color: inherit;
     position: relative;
     margin-top: 200px;
-   
+    margin-left: 50%;
+    margin-top: 50px;
+}
+#hako3botan:hover {
+    background-color: rgba(170, 131, 86, 0.1);
 }

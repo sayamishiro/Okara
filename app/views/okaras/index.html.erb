@@ -17,9 +17,10 @@
       <% @okaras.each do |t| %>
 
         <div class="itiran-nakami">
-          <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
-        
-          <%= t.title %><br>
+          <%= image_tag t.image_url, size: "250" if t.image? %><br>
+          <div class="itiran-title">        
+            <%= t.title %><br>
+          </div>
           <%= t.gozen1 %> ・
           <%= t.gozen2 %> ・
           <%= t.gogo1 %> ・
@@ -62,8 +63,9 @@
     <% @rank_okaras.each do |t| %> 
         <div class="ranking-nakami">
           <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
-        
-          <%= t.title %><br>
+          <div class="ranking-title">
+            <%= t.title %><br>
+          </div>
           <%= t.gozen1 %> ・
           <%= t.gozen2 %> ・
           <%= t.gogo1 %> ・
